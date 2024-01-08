@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  app:
+    depends_on:
+      - postgres
+    build: .
+    restart: on-failure
+    ports:
+      - 8000:8080
+  postgres:
+    image: postgres:16.1-alpine
+    restart: unless-stopped
+    environment:
+      #TODO Vault OR env_file
+      POSTGRES_DB: "facetnavdb"
+      POSTGRES_USER: "facetnavusr"
+      POSTGRES_PASSWORD: "facetnavpwd"
+    ports:
+      - 5432:5432

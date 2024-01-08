@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/facetnavdb
+    # TODO: Vault or env
+    username: facetnavusr
+    password: facetnavpwd
+    #driver-class-name: org.postgresql.Driver
+  jpa:
+    #Enable SQL logging
+    show-sql: true
+    #Format the SQL statements for better readability
+    hibernate:
+      #ddl-auto: update
+      format_sql: true
+  liquibase:
+    change-log: classpath:db/changelog.sql
