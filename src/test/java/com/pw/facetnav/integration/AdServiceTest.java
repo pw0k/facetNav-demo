@@ -1,4 +1,4 @@
-package com.pw.facetnav.integrational;
+package com.pw.facetnav.integration;
 
 import com.pw.facetnav.model.ad.Ad;
 import com.pw.facetnav.model.ad.AdRepository;
